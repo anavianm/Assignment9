@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Song List</title>
+<link href="main.css" rel="stylesheet" type="text/css">
+<script src="jquery-3.4.1.min.js"></script>
+</head>
+	
+<body>
+	<div>
+		<select id="songs" onChange="getElement(this.value)">
+			<option selected>--Select a Genre--</option>
+			<option value="All">All</option>
+			<option value="Rock">Rock</option>
+			<option value="Punk">Punk</option>
+			<option value="EDM">EDM</option>
+			<option value="Pop">Pop</option>
+			<option value="Electronic">Electronic</option>
+			<option value="Soft Rock">Soft Rock</option>
+
+		</select>
+	</div>
+
+	<div class="songList">
+		<div>
+			<h1 id="title0"></h1>
+			<h5 id="artist0"></h5>
+			<p id="genre0"></p>
+			<p id="artists0"></p>
+			<p id="album0"></p>
+			<p id="year0"></p>
+		</div>
+		<div>
+			<h1 id="title1"></h1>
+			<h5 id="artist1"></h5>
+			<p id="genre1"></p>
+			<p id="artists1"></p>
+			<p id="album1"></p>
+			<p id="year1"></p>
+		</div>
+		<div>
+			<h1 id="title2"></h1>
+			<h5 id="artist2"></h5>
+			<p id="genre2"></p>
+			<p id="artists2"></p>
+			<p id="album2"></p>
+			<p id="year2"></p>
+		</div>
+		<div>
+			<h1 id="title3"></h1>
+			<h5 id="artist3"></h5>
+			<p id="genre3"></p>
+			<p id="artists3"></p>
+			<p id="album3"></p>
+			<p id="year3"></p>
+		</div>
+		<div>
+			<h1 id="title4"></h1>
+			<h5 id="artist4"></h5>
+			<p id="genre4"></p>
+			<p id="artists4"></p>
+			<p id="album4"></p>
+			<p id="year4"></p>
+		</div>
+		<div>
+			<h1 id="title5"></h1>
+			<h5 id="artist5"></h5>
+			<p id="genre5"></p>
+			<p id="artists5"></p>
+			<p id="album5"></p>
+			<p id="year5"></p>
+		</div>
+		<div>
+			<h1 id="title6"></h1>
+			<h5 id="artist6"></h5>
+			<p id="genre6"></p>
+			<p id="artists6"></p>
+			<p id="album6"></p>
+			<p id="year6"></p>
+		</div>
+		<div>
+			<h1 id="title7"></h1>
+			<h5 id="artist7"></h5>
+			<p id="genre7"></p>
+			<p id="artists7"></p>
+			<p id="album7"></p>
+			<p id="year7"></p>
+		</div>
+		<div>
+			<h1 id="title8"></h1>
+			<h5 id="artist8"></h5>
+			<p id="genre8"></p>
+			<p id="artists8"></p>
+			<p id="album8"></p>
+			<p id="year8"></p>
+		</div>
+		<div>
+			<h1 id="title9"></h1>
+			<h5 id="artist9"></h5>
+			<p id="genre9"></p>
+			<p id="artists9"></p>
+			<p id="album9"></p>
+			<p id="year9"></p>
+		</div>
+	</div>
+	
+	<p id="s0"></p>
+	<p id="s1"></p>
+	<p id="s2"></p>
+	<p id="s3"></p>
+	<p id="s4"></p>
+	<p id="s5"></p>
+	<p id="s6"></p>
+	<p id="s7"></p>
+	<p id="s8"></p>
+	<p id="s9"></p>
+
+	
+	
+	
+</body>
+	<script language="javascript">
+		var one = {
+			"track" : "1", 
+			"title" : "Take it Easy", 
+			"artist": "Eagles",
+			"genre" : ["Rock", "Soft Rock"], 
+			"bandMembers" : ["Glenn Frey", "Don Henley",  "Joe Walsh", "Randy Meisner", "Bernie Leadon" ], 
+			"album" : "Eagles: 1972", 
+			"year" : "1972"
+  		};	
+		
+		var two = {
+			"track" : "2", 
+			"title" : "Witchy Woman", 
+			"artist": "Eagles",
+			"genre" : ["Rock", "Soft Rock"], 
+			"bandMembers" : ["Glenn Frey", "Don Henley",  "Joe Walsh", "Randy Meisner", "Bernie Leadon" ], 
+			"album" : "Eagles", 
+			"year" : "1972"	
+		};
+		
+		var three = {
+			"track" : "3", 
+			"title" : "Lyin' Eyes",
+			"artist": "Eagles",
+			"genre" : ["Rock", "Soft Rock"], 
+			"bandMembers" : ["Glenn Frey", "Don Henley",  "Joe Walsh", "Randy Meisner", "Bernie Leadon" ], 
+			"album" : "On the Border", 
+			"year" : "1974"
+		};
+		
+		var four = {
+			"track" : "4", 
+			"title" : "Shelter", 
+			"artist": "Porter Robinson",
+			"genre" : ["EDM", "Electronic"], 
+			"bandMembers" : ["Porter Robinson, Madeon" ], 
+			"album" : "Shelter", 
+			"year" : "2016"
+		};
+		
+		var five = {
+			"track" : "5", 
+			"title" : "Desperado", 
+			"artist": "Eagles",
+			"genre" : ["Rock", "Soft Rock"], 
+			"bandMembers" : ["Glenn Frey", "Don Henley",  "Joe Walsh", "Randy Meisner", "Bernie Leadon" ], 
+			"album" : "Desperado", 
+			"year" : "1973"
+		};
+		
+		var six = {
+			"track" : "6", 
+			"title" : "Train in Vain",
+			"artist": "The Clash",
+			"genre" : ["Punk"], 
+			"bandMembers" : ["Joe Strummer", "Mick Jones", "Paul Simonon", "Topper Headon" ], 
+			"album" : "London Calling", 
+			"year" : "1979"
+		};
+		
+		var seven = {
+			"track" : "7", 
+			"title" : "Sister Golden Hair", 
+			"artist": "America",
+			"genre" : ["Folk", "Rock"], 
+			"bandMembers" : ["Dewey Bunnell", "Dan Peek", "Gerry Beckley"], 
+			"album" : "Hearts", 
+			"year" : "1975"
+		};
+		
+		var eight = {
+			"track" : "8", 
+			"title" : "Take it to the Limit",
+			"artist": "Eagles",
+			"genre" : ["Rock", "Soft Rock"], 
+			"bandMembers" : ["Glenn Frey", "Don Henley",  "Joe Walsh", "Randy Meisner", "Bernie Leadon" ], 
+			"album" : "One of These Nghts", 
+			"year" : "1975"
+		};
+		
+		var nine = {
+			"track" : "9", 
+			"title" : "Paradise", 
+			"artist": "George Ezra",
+			"genre" : ["Pop"], 
+			"bandMembers" : ["George Ezra"], 
+			"album" : "Eagles", 
+			"year" : "1972"
+		};
+		
+		var ten = {
+			"track" : "10", 
+			"title" : "S.O.S", 
+			"artist": "ABBA",
+			"genre" : ["Pop", "Rock"], 
+			"bandMembers" : ["Agnetha Fältskog", "Anni-Frid Lyngstad", "Björn Ulvaeus", "Benny Andersson" ], 
+			"album" : "ABBA", 
+			"year" : "1975"
+		};
+		
+		
+		var objectList = new Array();
+		objectList.push(one, two, three, four, five, six, seven, eight, nine, ten);
+		
+		for(var i = 0; i < objectList.length; i++){
+				strOne = JSON.stringify(objectList[i]);
+				document.getElementById("s"+i).innerHTML = strOne;
+				
+		}
+		
+		function getElement(input){
+			for(var x = 0; x<10; x++){
+				document.getElementById("title"+x).innerHTML = " ";
+				document.getElementById("artist"+x).innerHTML = " ";
+				document.getElementById("genre"+x).innerHTML = " ";
+				document.getElementById("artists"+x).innerHTML = " ";
+				document.getElementById("album"+x).innerHTML = " ";
+				document.getElementById("year"+x).innerHTML = " ";
+			}
+			console.log(input);
+			for(var i = 0; i < objectList.length; i++){
+				strOne = JSON.stringify(objectList[i]);
+				jsonOne = JSON.parse(strOne);
+					if(input == "All"){
+						document.getElementById("title"+i).innerHTML = (jsonOne["title"]);
+						document.getElementById("artist"+i).innerHTML = (jsonOne["artist"]);
+						document.getElementById("genre"+i).innerHTML = ("Genre: " + jsonOne["genre"]);
+						document.getElementById("artists"+i).innerHTML = ("Band Members: " + jsonOne["bandMembers"]);
+						document.getElementById("album"+i).innerHTML = ("Album: " + jsonOne["album"]);
+						document.getElementById("year"+i).innerHTML = ("Year: " + jsonOne["year"]);
+					}else if(jsonOne["genre"].includes(input)){
+						document.getElementById("title"+i).innerHTML = (jsonOne["title"]);
+						document.getElementById("artist"+i).innerHTML = (jsonOne["artist"]);
+						document.getElementById("genre"+i).innerHTML = ("Genre: " + jsonOne["genre"]);
+						document.getElementById("artists"+i).innerHTML = ("Band Members: " + jsonOne["bandMembers"]);
+						document.getElementById("album"+i).innerHTML = ("Album: " + jsonOne["album"]);
+						document.getElementById("year"+i).innerHTML = ("Year: " + jsonOne["year"]);
+					}
+				}
+			}
+		
+		
+			
+//		var dropdown = document.getElementById("songs");
+//		var input = dropdown.options[dropdown.selectedIndex].value;
+//		console.log(input);
+				
+			
+			
+		
+		
+		
+		
+//		function Song(track, title, artist, genre, bandMembers, album, year){
+//			this.track = track;
+//			this.title = title;
+//			this.artist = artist; 
+//			this.genre = genre;
+//			this.bandMembers = bandMembers;
+//			this.album = album;
+//			this.year = year;
+//		}
+//		
+//		var one = new Song("1", "Take it Easy", "Eagles",["Rock, Soft Rock"], ["Glenn Frey", "Don Henley",  "Joe Walsh", "Randy Meisner", "Bernie Leadon" ], "Eagles: 1972", "1972");
+		
+		
+		
+		
+	</script>
+	<script language="javascript">
+
+		
+	</script>
+</html>

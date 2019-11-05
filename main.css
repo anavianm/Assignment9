@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{
+/*	background-color: #303F9F;*/
+	text-align: center;
+}
+
+.songList{
+/*	color: #FFFFFF;*/
+}
+#songs{
+	position:relative;
+	display: inline-block;
+	margin: 10px;
+/*	color: #ffffff;*/
+	font-size: 16px;
+}
+
+#songs-content
+
+#song{
+	margin: auto;
+}
